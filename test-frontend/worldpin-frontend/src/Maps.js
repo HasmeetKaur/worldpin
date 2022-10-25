@@ -76,7 +76,7 @@ const Maps = () => {
         />
       </div>
       <h1>
-        World Pin
+        WorldPin {""}
         <span role="img" aria-label="tent">
           🌍📍
         </span>

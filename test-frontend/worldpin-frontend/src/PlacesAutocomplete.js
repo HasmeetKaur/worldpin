@@ -78,6 +78,7 @@ const PlacesAutocomplete = ({setSelected, mapRef}) => {
               <ComboboxOption key={place_id} value={description} />
             ))}
         </ComboboxList>
+
         </div>
       </ComboboxPopover>        
     </Combobox>

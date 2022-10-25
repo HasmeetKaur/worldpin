@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState, useRef } from "react";
 import mapStyle from "./mapStyle";
 
-import PlacesAutoComplete from "./Places"
+import PlacesAutoComplete from "./PlacesAutocomplete"
 
 import {formatRelative} from "date-fns";
 
@@ -32,6 +32,8 @@ const options = {
   styles: mapStyle,
   disableDefaultUI: true, // removes default google maps functionality
   zoomControl: true,
+  minZoom: 3.5,
+ maxZoom: 20,
 };
 
 const Maps = () => {
@@ -69,8 +71,9 @@ const Maps = () => {
 
   return isLoaded ? (
     <div>
-      <div className="places-container">
-        <PlacesAutoComplete setSelected = {setSelected}/>
+      <div>
+        <PlacesAutoComplete setSelected = {setSelected} mapRef= {mapRef}
+        />
       </div>
       <h1>
         World Pin
